@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo Homework</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--axios link-->
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <!--Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Source+Code+Pro:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col">
+            <h1 class="city" id="lat-lon">Type in a City</h1>
+            <h2>Friday 24 February</h2>
+
+            <!--location button-->
+            <button type="button" class="btn btn-primary">📍Current</button>
+          </div>
+          <div class="col search">
+            <form id="search-form">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search City :"
+                id="search-text-input"
+                autocomplete="off"
+              />
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="row">
+          <!--first half (left)-->
+          <div class="col-3 cloud">⛅</div>
+          <div class="col-3 thirty-three">
+            <div id="current-temperature">-</div>
+            <span class="under-degree col-6" id="weather-description"> - </span>
+          </div>
+
+          <div class="col vl"></div>
+
+          <!--second half (right)-->
+          <div class="col upper">
+            <div id="high">-</div>
+            <div class="smaller">High (℃)</div>
+            <br />
+            <div>
+              <div id="low">-</div>
+              <div class="smaller">Low (℃)</div>
+            </div>
+          </div>
+
+          <div class="col upper">
+            <div id="wind">-mph</div>
+            <div class="smaller">Wind</div>
+            <br />
+            <div>
+              <div id="humidity">-%</div>
+              <div class="smaller">Humidity</div>
+            </div>
+          </div>
+
+          <div class="col upper">
+            <div>06 : 40</div>
+            <div class="smaller">Sunrise</div>
+            <br />
+            <div>
+              <div>18 : 40</div>
+              <div class="smaller">Sunset</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+
+      <section>
+        <div class="row">
+          <div class="col time">
+            <div>6am</div>
+            <div class="emoji">⛈</div>
+            <div>22 ℃</div>
+          </div>
+
+          <div class="col time">
+            <div>9am</div>
+            <div class="emoji">🌦</div>
+            <div>28 ℃</div>
+          </div>
+
+          <div class="col time">
+            <div>12pm</div>
+            <div class="emoji">🌥</div>
+            <div>35 ℃</div>
+          </div>
+
+          <div class="col time">
+            <div>3pm</div>
+            <div class="emoji">🌥</div>
+            <div>38 ℃</div>
+          </div>
+
+          <div class="col time">
+            <div>6pm</div>
+            <div class="emoji">☁</div>
+            <div>31 ℃</div>
+          </div>
+
+          <div class="col time">
+            <div>9pm</div>
+            <div class="emoji">🌧</div>
+            <div>20 ℃</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
