@@ -1,9 +1,16 @@
 body {
-  border: 3px solid black;
-  border-radius: 20px;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 2%;
+  background: linear-gradient(
+    109.6deg,
+    rgb(151, 213, 255) 11.2%,
+    rgb(255, 155, 185) 91.1%
+  );
+}
+.container {
+  border: 3px solid black;
+  border-radius: 20px;
   padding: 40px;
 }
 
@@ -58,6 +65,7 @@ h2 {
   margin-left: 5px;
   margin-right: 5px;
   transition: all 1000ms ease-in-out;
+  font-family: "Quicksand", sans-serif;
 }
 .time:hover {
   cursor: pointer;
