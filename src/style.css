@@ -55,8 +55,9 @@ h2 {
 }
 
 .time {
-  border: 3px solid yellow;
+  border: 3px solid #2f1b41;
   border-radius: 50px;
+  color: #4f323b;
   text-align: center;
   padding: 15px;
   font-size: 18px;
@@ -79,4 +80,8 @@ h2 {
 .vl {
   border-left: 3px solid black;
   height: 150px;
+}
+
+.btn {
+  background-color: #2f1b41;
 }
