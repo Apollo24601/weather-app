@@ -77,6 +77,22 @@ h2 {
   height: 150px;
 }
 
+.units {
+  font-size: 20px;
+}
+.units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.units .active:hover{
+  color: blue;
+}
+
+.btn {
+  background-color: #314a52;
+}
+
 .btn {
   background-color: #314a52;
 }
