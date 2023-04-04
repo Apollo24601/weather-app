@@ -56,14 +56,14 @@
       <section>
         <div class="row">
           <!--first half (left)-->
-          <div class="col-3 cloud">
+          <div class="col-3 main-weather-icon">
             <img
               src="http://openweathermap.org/img/wn/01d@2x.png"
               alt=""
               id="icon"
             />
           </div>
-          <div class="col-3 thirty-three">
+          <div class="col-3 weather-header">
             <div id="current-temperature">-</div>
             <div class="units">
               <a href="" id="celsius-link" class="active">℃</a>|<a
@@ -73,7 +73,7 @@
                 >℉</a
               >
             </div>
-            <span class="under-degree col-6" id="weather-description"> - </span>
+            <span class="under-header col-6" id="weather-description"> - </span>
           </div>
 
           <div class="col vl"></div>
@@ -114,60 +114,81 @@
 
       <section>
         <div class="row">
-          <div class="col time">
-            <div>Sun</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Sun</div>
             <div>
               <img src="http://openweathermap.org/img/wn/10d@2x.png" />
             </div>
-            <div>22 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">18°</span>
+              <span class="min-temp">12°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Mon</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Mon</div>
             <div>
               <img src="http://openweathermap.org/img/wn/01n@2x.png" />
             </div>
-            <div>28 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">28°</span>
+              <span class="min-temp">15°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Tue</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Tue</div>
             <div class="emoji">
               <img src="http://openweathermap.org/img/wn/01d@2x.png" />
             </div>
-            <div>35 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">23°</span>
+              <span class="min-temp">10°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Wed</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Wed</div>
             <div class="emoji">
               <img src="http://openweathermap.org/img/wn/09n@2x.png" />
             </div>
-            <div>38 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">16°</span>
+              <span class="min-temp">5°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Thurs</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Thurs</div>
             <div class="emoji">
               <img src="http://openweathermap.org/img/wn/01n@2x.png" />
             </div>
-            <div>31 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">8°</span>
+              <span class="min-temp">15°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Fri</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Fri</div>
             <div class="emoji">
               <img src="http://openweathermap.org/img/wn/03n@2x.png" />
             </div>
-            <div>20 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">18°</span>
+              <span class="min-temp">1°</span>
+            </div>
           </div>
 
-          <div class="col time">
-            <div>Sat</div>
+          <div class="col weather-forecast">
+            <div class="weather-forecast-day">Sat</div>
             <div class="emoji">
               <img src="http://openweathermap.org/img/wn/10n@2x.png" />
             </div>
-            <div>20 ℃</div>
+            <div class="weather-forecast-temps">
+              <span class="max-temp">38°</span>
+              <span class="min-temp">12°</span>
+            </div>
           </div>
         </div>
       </section>

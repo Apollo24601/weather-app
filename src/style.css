@@ -26,17 +26,17 @@ h2 {
   font-size: 18px;
 }
 
-.cloud {
+.main-weather-icon {
   padding: 10px;
 }
 
-.thirty-three {
-  font-size: 35px;
+.weather-header {
+  font-size: 45px;
   font-weight: bold;
   font-family: "Source Code Pro", monospace;
 }
 
-.under-degree {
+.under-header {
   font-size: 18px;
 }
 
@@ -54,12 +54,12 @@ h2 {
   font-family: "Source Code Pro", monospace;
 }
 
-.time {
+.weather-forecast {
   border: 3px solid #2f1b41;
   border-radius: 30px;
   color: #4f323b;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 
   margin-left: 5px;
@@ -67,16 +67,19 @@ h2 {
   transition: all 1000ms ease-in-out;
   font-family: "Quicksand", sans-serif;
 }
-.time:hover {
+.weather-forecast:hover {
   cursor: pointer;
   border: 3px solid red;
+}
+
+.min-temp {
+  opacity: 0.6;
 }
 
 .vl {
   border-left: 3px solid black;
   height: 150px;
 }
-
 .units {
   font-size: 20px;
 }
@@ -85,12 +88,8 @@ h2 {
   cursor: default;
   text-decoration: none;
 }
-.units .active:hover{
+.units .active:hover {
   color: blue;
-}
-
-.btn {
-  background-color: #314a52;
 }
 
 .btn {
