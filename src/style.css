@@ -8,6 +8,7 @@ body {
   );
 }
 .container {
+  background-color: #c3d1db;
   max-width: 78%;
   border: 3px solid black;
   border-radius: 20px;
@@ -55,7 +56,6 @@ h2 {
 }
 
 .weather-forecast {
-  border: 3px solid #2f1b41;
   border-radius: 30px;
   color: #4f323b;
   text-align: center;
@@ -69,7 +69,7 @@ h2 {
 }
 .weather-forecast:hover {
   cursor: pointer;
-  border: 3px solid red;
+  background-color: pink;
 }
 
 .min-temp {

@@ -1,5 +1,3 @@
-//current time code
-
 let apiKey = "a710bd8bd76400c9658ef649d9e81728";
 
 //to overwrite h1
@@ -60,6 +58,33 @@ function formatDate(timestamp) {
 
   //calculate the date
   return `${day}, ${dateNumber} ${month} ${hour}:${minutes}`;
+}
+
+//accurate forcast descripiton
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+       <div class="col weather-forecast" id="forecast">
+            <div class="weather-forecast-day">${day}</div>
+            <div>
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+            </div>
+            <div>
+              <span class="max-temp">18°</span>
+              <span class="min-temp">12°</span>
+            </div>
+          </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //weather description
@@ -173,9 +198,12 @@ function showcelsiusTemp(event) {
 }
 
 let celsiusTemp = null;
+displayForecast();
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showcelsiusTemp);
+
+search("Paris");
