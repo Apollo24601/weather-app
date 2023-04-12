@@ -57,28 +57,41 @@ function formatDate(timestamp) {
   return `${day}, ${dateNumber} ${month} ${hour}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[day];
+}
+
 //daily forecast descripiton
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `
        <div class="col weather-forecast" id="forecast">
-            <div class="weather-forecast-day">${day}</div>
+            <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
             <div>
-              <img src="http://openweathermap.org/img/wn/10d@2x.png" />
+              <img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png" />
             </div>
             <div>
-              <span class="max-temp">18°</span>
-              <span class="min-temp">12°</span>
+              <span class="max-temp">${Math.round(forecastDay.temp.max)}°</span>
+              <span class="min-temp">${Math.round(forecastDay.temp.min)}°</span>
             </div>
           </div>
         `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -109,10 +122,10 @@ function showTemp(response) {
   temperatureElement.innerHTML = `${temperature} ℃`;
 
   let maxTemp = document.querySelector("#high");
-  maxTemp.innerHTML = `${response.data.main.temp_max}`;
+  maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}`;
 
   let minTemp = document.querySelector("#low");
-  minTemp.innerHTML = `${response.data.main.temp_min}`;
+  minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}`;
 
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `${response.data.wind.speed}mph`;

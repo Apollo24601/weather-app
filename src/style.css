@@ -67,10 +67,6 @@ h2 {
   transition: all 1000ms ease-in-out;
   font-family: "Quicksand", sans-serif;
 }
-.weather-forecast:hover {
-  cursor: pointer;
-  background-color: pink;
-}
 
 .min-temp {
   opacity: 0.6;
